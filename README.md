@@ -82,3 +82,18 @@ export const config = {
 
 ```
 
+## Custom docs fields
+You can specify your own `fields` by adding them in `config.js` file and use it in your components; 
+```javascript
+export const config = {
+  fields: ["your-field"],
+};
+```
+```javascript
+// @docs your-field
+
+ const example = some.important.code.to.document();
+
+// @
+```
+
