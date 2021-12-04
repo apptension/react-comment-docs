@@ -20,7 +20,7 @@ function Component1(props) {
     // @docs DOM
     <>
     <div>
-        <p>Tekst: </p>
+        <p>Tekst: example </p>
     </div>
     // @
 

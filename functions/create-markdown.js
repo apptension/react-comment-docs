@@ -2,7 +2,7 @@ import Mustache from 'mustache';
 import fs from 'fs';
 import { getFileName } from "./utils.js";
 
-export const createMarkdown = (componentURL, fields, templateURL) => {
+export const createMarkdown = (componentURL, fields, templateURL, dynamicTemplateURL) => {
   const fileName =  getFileName(componentURL);
   
   if(fileName === undefined) {
@@ -11,7 +11,7 @@ export const createMarkdown = (componentURL, fields, templateURL) => {
 
   let template = fs.readFileSync(templateURL).toString();
 
-  const dynamicTemplate = fs.readFileSync('./dynamic-template.md').toString();
+  const dynamicTemplate = fs.readFileSync(dynamicTemplateURL).toString();
   for (const [key, value] of Object.entries(fields)) {
     const dynamicOutput = Mustache.render(dynamicTemplate, {key, value});
     template = template.concat('\n',dynamicOutput)

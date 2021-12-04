@@ -9,14 +9,14 @@ import { filterByExtensions } from "./functions/utils.js";
 const fileNames = initialize(config.componentsDir, "./docs", config.extensions);
 fileNames.forEach((fileName) => {
   const variables = getDataForMarkdown(fileName, config.fields);
-  createMarkdown(fileName, variables, config.templatePath);
+  createMarkdown(fileName, variables, config.templatePath, config.dynamicTemplatePath);
 });
 
 chokidar.watch(config.componentsDir).on("all", (event, fileName) => {
   if (filterByExtensions([fileName], config.extensions).length) {
     if (event === "add" || event === "change") {
       const variables = getDataForMarkdown(fileName, config.fields);
-      createMarkdown(fileName, variables, config.templatePath);
+      createMarkdown(fileName, variables, config.templatePath, config.dynamicTemplatePath);
       console.log(`Docs for ${fileName} updated.`);
     }
 
