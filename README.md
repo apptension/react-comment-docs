@@ -39,10 +39,10 @@ function ExampleComponent(props) {
 ```javascript
   // @docs functions
   const getNameLength = (name) => {
-  return name.length;
+    return name.length;
 
   function getNameType(name){
-  return typeof(name)  
+    return typeof(name)  
   }
   // @
 ```
