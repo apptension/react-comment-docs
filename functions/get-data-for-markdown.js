@@ -10,8 +10,9 @@ export const getDataForMarkdown = (path, fields) => {
     let text = delve(match, `groups.${field}`, null);
     if (!text) return;
     const formattedText = text.replace(/\/\//, "");
-    data[field] = formattedText;
+    data[field] = formattedText.trim();
   });
 
+  console.log(data);
   return data;
 };
