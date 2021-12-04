@@ -29,6 +29,9 @@ props = {
   props3,
 }
 // @
+function ExampleComponent(props) {
+  return ()
+}
 ```
 
 
