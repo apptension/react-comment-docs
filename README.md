@@ -1,5 +1,7 @@
 # react-comment-docs
 
+Low-effort self-documented components
+
 ## Getting started
 
 [TBD]
