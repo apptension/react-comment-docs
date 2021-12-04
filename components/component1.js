@@ -7,21 +7,24 @@
 import React from 'react'
 
 // @docs params
-props = { 
-  text,
-  props2,
-  props3,
-}
+// props = { 
+//   text,
+//   props2,
+//   props3,
+// }
 // @
 
-// @docs DOM
-function component1(props) {
+function Component1(props) {
+
   return (
+    // @docs DOM
     <div>
         <p>Tekst: </p>
     </div>
+    // @
   )
 }
-// @
 
 export default component1
+
+<Component name='test' />

@@ -11,7 +11,7 @@ Low-effort self-documented components
 ### Syntax:
 
 ```javascript
-// @doc {variable}
+// @doc {field}
 -> code here
 // @ 
 ```
@@ -22,7 +22,7 @@ Low-effort self-documented components
 
 #### Component props
 ```javascript
-// @docs params
+// @docs props
 props = { 
   text,
   props2,
@@ -71,7 +71,7 @@ ExampleComponent.propTypes = {
 You can specify the `fields` used in your docs, allowed component `extensions`, components and template `directory`.
 ```javascript
 export const config = {
-  fields: ["name", "description", "functions", "DOM", "params"],
+  fields: ["name", "description", "functions", "DOM", "props"],
   templatePath: "./template.md",
   extensions: [".js", ".jsx", ".ts", ".tsx"],
   componentsDir: "./components",
