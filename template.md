@@ -1,5 +1,3 @@
--- static data -- 
-
 # {{name}}
 
 {{description}}

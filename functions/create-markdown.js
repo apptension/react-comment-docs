@@ -11,13 +11,10 @@ export const createMarkdown = (componentURL, fields, templateURL) => {
 
   let template = fs.readFileSync(templateURL).toString();
 
-  let dynamicTemplate = fs.readFileSync('./dynamic-template.md').toString();
+  const dynamicTemplate = fs.readFileSync('./dynamic-template.md').toString();
   for (const [key, value] of Object.entries(fields)) {
     const dynamicOutput = Mustache.render(dynamicTemplate, { key, value});
-    // it works till this point
-    console.log('template before:' ,template)
-    template = template.concat(dynamicOutput)
-    console.log('template after:' ,template)
+    template = template.concat('\n',dynamicOutput)
   }
   
   const output = Mustache.render(template, fields);

@@ -13,6 +13,5 @@ export const getDataForMarkdown = (path, fields) => {
     data[field] = formattedText.trim();
   });
 
-  console.log(data);
   return data;
 };
