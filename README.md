@@ -1,23 +1,79 @@
 # react-comment-docs
 
-## How to use? 
+## Getting started
+
+[TBD]
+
+## How to use it? 
 
 ### Syntax:
 
-// @doc {props}
+```javascript
+// @doc {variable}
 -> code here
 // @ 
+```
+#### Component description
+```javascript
+ // @doc description This is example component description. Keep it simple and easy to understand, try to describe all the component logic. @
+```
 
-// Props (optional)
+#### Component props
+```javascript
+// @docs params
+props = { 
+  text,
+  props2,
+  props3,
+}
+// @
+```
 
-// State (optional)
 
-// Description (optional)
+#### Component functions 
+```javascript
+  // @docs functions
+  const getNameLength = (name) => {
+  return name.length;
 
-// Component 
+  function getNameType(name){
+  return typeof(name)  
+  }
+  // @
+```
 
-// Functions (optional)
+#### DOM elements
+```javascript
+function ExampleComponent(props) {
+  return (
+    // @docs DOM
+    <div>
+        <p>Lorem ipsum</p>
+    </div>
+    // @
+  )
+}
+```
 
-// DOM 
+#### PropTypes
+```javascript
+// @docs propTypes
+ExampleComponent.propTypes = {
+  name: PropTypes.string.isRequired,
+  darkMode: PropTypes.bool,
+};
+// @
+```
 
-// PropTypes (optional)
+### Config 
+You can specify the `fields` used in your docs, allowed component `extensions`, components and template `directory`.
+```javascript
+export const config = {
+  fields: ["name", "description", "functions", "DOM", "params"],
+  templatePath: "./template.md",
+  extensions: [".js", ".jsx", ".ts", ".tsx"],
+  componentsDir: "./components",
+};
+
+```
+
