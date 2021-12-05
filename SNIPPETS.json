@@ -1,3 +1,4 @@
+{
 "React Function Component Export Docs": {
     "prefix": "rfced",
     "body": [
@@ -38,3 +39,4 @@
     ],
     "description": "React Class Component with Docs"
   }
+}
