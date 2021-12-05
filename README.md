@@ -98,6 +98,7 @@ ExampleComponent.propTypes = {
 ```
 
 ### Config 
+Config file is placed in `node_modules/@apptension/react-comment-docs`.
 You can specify the `fields` used in your docs, allowed component `extensions`, components and templates `directory`.
 ```javascript
 export const config = {
@@ -125,10 +126,9 @@ export const config = {
 // !docs your-field
 ```
 
-## Add component snippets with docs indluded in VSCODE 
+## Add component snippets with docs included in VSCODE 
 1. Copy the code from `SNIPPETS.json` file
 2. Open VSCode console using cmd + P then type and select `>Configure User Snippets`
 3. Select `javascriptreact.json` file.
 4. Paste the code from `SNIPPETS.json` file
  
-
