@@ -37,6 +37,5 @@ export const getDataForMarkdown = (path, fields) => {
     data[field] = formattedText;
   });
 
-  console.log('DATA',data)
   return data;
 };

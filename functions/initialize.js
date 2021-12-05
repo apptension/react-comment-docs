@@ -21,7 +21,6 @@ const getAllFiles = function (dirPath, arrayOfFiles) {
 export const initialize = (config) => {
   let {componentsDir, docsDir, extensions, templatePath, dynamicTemplatePath} = config;
 
-
   if (!fs.existsSync(docsDir)) {
     fs.mkdirSync(docsDir);
   }
@@ -31,6 +30,9 @@ export const initialize = (config) => {
   if (!fs.existsSync(dynamicTemplatePath)) {
     dynamicTemplatePath = path.join(path.resolve(), '/node_modules/@apptension/react-comment-docs/dynamic-template-fragment.md')
   }
+
+
+
 
   const files = getAllFiles(componentsDir);
   const filteredFiles = filterByExtensions(files, extensions);
