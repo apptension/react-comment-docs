@@ -1,9 +1,9 @@
 import React from 'react'
 
 interface ExampleProps {
-  label: string,
-  age: Number,
-  name: 'string'
+  label: String;
+  age?: Number;
+  name: String;
 }
 
 function example(props) {
