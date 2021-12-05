@@ -1,5 +1,5 @@
 {
-  "name": "react-comment-docs",
+  "name": "@apptension/react-comment-docs",
   "version": "1.0.0",
   "description": "Low-effort self-documented components",
   "main": "index.js",
