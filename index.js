@@ -8,11 +8,7 @@ import { deleteMarkdown } from "./functions/delete-markdown.js";
 import { filterByExtensions } from "./functions/utils.js";
 
 export const startReactCommentDocs = () => {
-  const fileNames = initialize(
-    config.componentsDir,
-    "./docs",
-    config.extensions
-  );
+  const fileNames = initialize(config);
   fileNames.forEach((fileName) => {
     const variables = getDataForMarkdown(fileName, config.fields);
     createMarkdown(
