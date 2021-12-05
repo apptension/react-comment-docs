@@ -9,7 +9,7 @@ export const getDataForMarkdown = (path, fields) => {
     const match = fileContent.match(re);
     let text = delve(match, `groups.${field}`, null);
     if (!text) return;
-    const formattedText = text.replace(/\/\/ [@!]docs.*/g, "");
+    const formattedText = text.replace(/^\s+\/\/ [@!]docs.*$\n/mg, "").replace(/^\s+\/\/.*$/mg, "");
     data[field] = formattedText.trim();
     console.log(formattedText)
   });
