@@ -4,7 +4,7 @@ import { readFileSync } from "fs";
 export const getDataForMarkdown = (path, fields) => {
   const fileContent = readFileSync(path, "utf8");
   const data = {};
-  const tsReg = new RegExp(`interface .* {(?<types>[^}]+)^}`, "ms");
+  const tsReg = new RegExp(`^interface \\w+ {(?<types>[^}]+)}$`, 'm');
   const tsMatch = fileContent.match(tsReg);
   // Typescript support
   if (tsMatch) {
