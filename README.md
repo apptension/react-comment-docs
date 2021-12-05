@@ -70,12 +70,25 @@ ExampleComponent.propTypes = {
 // @
 ```
 
+#### Translations
+```javascript
+// @docs translations
+<CustomButton
+ label={intl.formatMessage({
+    description: 'A11Y: Navigation Button',
+    defaultMessage: 'Navigate',
+  })}
+ />
+// @
+```
+
 ### Config 
-You can specify the `fields` used in your docs, allowed component `extensions`, components and template `directory`.
+You can specify the `fields` used in your docs, allowed component `extensions`, components and templates `directory`.
 ```javascript
 export const config = {
-  fields: ["name", "description", "functions", "DOM", "props"],
+  fields: ["name", "description", "functions", "DOM", "props", "translation"],
   templatePath: "./template.md",
+  dynamicTemplatePath: "./dynamic-template-fragment.md",
   extensions: [".js", ".jsx", ".ts", ".tsx"],
   componentsDir: "./components",
 };
