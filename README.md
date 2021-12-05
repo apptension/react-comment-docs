@@ -111,9 +111,9 @@ export const config = {
 ```
 
 ## Add component snippets with docs indluded in VSCODE 
-1. Copy the code from SNIPPETS.js
+1. Copy the code from `SNIPPETS.json` file
 2. Open VSCode console using cmd + P then type and select `>Configure User Snippets`
 3. Select `javascriptreact.json` file.
-4. Paste the code from SNIPPETS.js
+4. Paste the code from `SNIPPETS.json` file
  
 
