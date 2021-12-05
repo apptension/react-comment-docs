@@ -1,23 +1,38 @@
 # react-comment-docs
 
-Low-effort self-documented components
+Low-effort self-documented components.
+
+This small package allow you to create documentation for your components on the fly. It's as simple as writing comments in your files. 
+It will create a `markdown` file for each of your components automatically! You can customize it however you want in `config.js`.
+For even better experience, we recommend using our [snippets](##Add-component-snippets-with-docs-indluded-in-VSCODE) for VSCode.
 
 ## Getting started
 
-[TBD]
+Install npm package ✨
+```bash
+npm i npm i @apptension/react-comment-docs
+```
+
+Run watcher 👀
+```bash
+npx react-comment-docs
+```
+
 
 ## How to use it? 
 
 ### Syntax:
 
 ```javascript
-// @doc {field}
+// @docs {field}
 -> code here
-// @ 
+// !docs {field}
 ```
 #### Component description
 ```javascript
- // @doc description This is example component description. Keep it simple and easy to understand, try to describe all the component logic. @
+// @docs description
+ This is example component description. Keep it simple and easy to understand, try to describe all the component logic. 
+// !docs
 ```
 
 #### Component props
@@ -44,7 +59,7 @@ function ExampleComponent(props) {
   function getNameType(name){
     return typeof(name)  
   }
-  // @
+  // !docs functions
 ```
 
 #### DOM elements
@@ -55,7 +70,7 @@ function ExampleComponent(props) {
     <div>
         <p>Lorem ipsum</p>
     </div>
-    // @
+    // !docs DOM
   )
 }
 ```
@@ -67,7 +82,7 @@ ExampleComponent.propTypes = {
   name: PropTypes.string.isRequired,
   darkMode: PropTypes.bool,
 };
-// @
+// !docs propTypes
 ```
 
 #### Translations
@@ -79,7 +94,7 @@ ExampleComponent.propTypes = {
     defaultMessage: 'Navigate',
   })}
  />
-// @
+// !docs translations
 ```
 
 ### Config 
@@ -107,7 +122,7 @@ export const config = {
 
  const example = some.important.code.to.document();
 
-// @
+// !docs your-field
 ```
 
 ## Add component snippets with docs indluded in VSCODE 
