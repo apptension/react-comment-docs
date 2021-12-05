@@ -1,6 +1,5 @@
 import fs from "fs";
 import path from "path";
-import { getDataForMarkdown } from "./get-data-for-markdown.js";
 import { filterByExtensions } from "./utils.js";
 
 const getAllFiles = function (dirPath, arrayOfFiles) {
@@ -12,7 +11,7 @@ const getAllFiles = function (dirPath, arrayOfFiles) {
     if (fs.statSync(dirPath + "/" + file).isDirectory()) {
       arrayOfFiles = getAllFiles(dirPath + "/" + file, arrayOfFiles);
     } else {
-      arrayOfFiles.push(path.join(path.resolve(), dirPath, "/", file));
+      arrayOfFiles.push(path.join(dirPath, "/", file));
     }
   });
 

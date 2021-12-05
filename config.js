@@ -1,7 +1,9 @@
+import path from "path";
+
 export const config = {
   fields: ["name", "description", "functions", "DOM", "props", "translation"],
-  templatePath: "./template.md",
-  dynamicTemplatePath: "./dynamic-template-fragment.md",
+  templatePath: `${path.resolve()}/template.md`,
+  dynamicTemplatePath: `${path.resolve()}/dynamic-template-fragment.md`,
   extensions: [".js", ".jsx", ".ts", ".tsx"],
-  componentsDir: "./components",
+  componentsDir: `${path.resolve()}/components`,
 };
