@@ -19,21 +19,20 @@ const getAllFiles = function (dirPath, arrayOfFiles) {
 };
 
 export const initialize = (config) => {
-  const {componentsDir, docsDir, extensions, templatePath, dynamicTemplatePath} = config;
+  let {componentsDir, docsDir, extensions, templatePath, dynamicTemplatePath} = config;
+
 
   if (!fs.existsSync(docsDir)) {
     fs.mkdirSync(docsDir);
   }
   if (!fs.existsSync(templatePath)) {
-    const defaultTemplatePath = path.join(path.resolve(), '/node_modules/react-comment-docs/template.md')
-    fs.copyFileSync(defaultTemplatePath, templatePath);
+    templatePath = path.join(path.resolve(), '/node_modules/react-comment-docs/template.md')
   }
   if (!fs.existsSync(dynamicTemplatePath)) {
-    const defaultDynamicTemplatePath = path.join(path.resolve(), '/node_modules/react-comment-docs/dynamic-template-fragment.md')
-    fs.copyFileSync(defaultDynamicTemplatePath, dynamicTemplatePath);
+    dynamicTemplatePath = path.join(path.resolve(), '/node_modules/react-comment-docs/dynamic-template-fragment.md')
   }
 
   const files = getAllFiles(componentsDir);
   const filteredFiles = filterByExtensions(files, extensions);
-  return filteredFiles;
+  return [filteredFiles, templatePath, dynamicTemplatePath];
 };

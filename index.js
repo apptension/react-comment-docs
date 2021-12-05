@@ -8,14 +8,14 @@ import { deleteMarkdown } from "./functions/delete-markdown.js";
 import { filterByExtensions } from "./functions/utils.js";
 
 export const startReactCommentDocs = () => {
-  const fileNames = initialize(config);
+  const [fileNames, templatePath, dynamicTemplatePath] = initialize(config);
   fileNames.forEach((fileName) => {
     const variables = getDataForMarkdown(fileName, config.fields);
     createMarkdown(
       fileName,
       variables,
-      config.templatePath,
-      config.dynamicTemplatePath
+      templatePath,
+      dynamicTemplatePath,
     );
   });
 
@@ -26,8 +26,8 @@ export const startReactCommentDocs = () => {
         createMarkdown(
           fileName,
           variables,
-          config.templatePath,
-          config.dynamicTemplatePath
+          templatePath,
+          dynamicTemplatePath
         );
         console.log(`Docs for ${fileName} updated.`);
       }
