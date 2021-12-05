@@ -26,10 +26,10 @@ export const initialize = (config) => {
     fs.mkdirSync(docsDir);
   }
   if (!fs.existsSync(templatePath)) {
-    templatePath = path.join(path.resolve(), '/node_modules/react-comment-docs/template.md')
+    templatePath = path.join(path.resolve(), '/node_modules/@apptension/react-comment-docs/template.md')
   }
   if (!fs.existsSync(dynamicTemplatePath)) {
-    dynamicTemplatePath = path.join(path.resolve(), '/node_modules/react-comment-docs/dynamic-template-fragment.md')
+    dynamicTemplatePath = path.join(path.resolve(), '/node_modules/@apptension/react-comment-docs/dynamic-template-fragment.md')
   }
 
   const files = getAllFiles(componentsDir);

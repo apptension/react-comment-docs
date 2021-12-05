@@ -15,7 +15,7 @@ npm i @apptension/react-comment-docs
 
 Run watcher 👀
 ```bash
-npx react-comment-docs
+npx @apptension/react-comment-docs
 ```
 
 
@@ -32,7 +32,7 @@ npx react-comment-docs
 ```javascript
 // @docs description
  This is example component description. Keep it simple and easy to understand, try to describe all the component logic. 
-// !docs
+// !docs description
 ```
 
 #### Component props
