@@ -1,8 +1,8 @@
-import path from "path";
+import { config } from "../config.js";
 
 export const getFileName = (componentURL) => {
   const componentName = componentURL.split('/').pop().split('.')[0]
-  return `${path.resolve()}/docs/${componentName}.md`
+  return `${config.docsDir}/${componentName}.md`
 }
 
 export const filterByExtensions = (strings, extensions) => {
