@@ -4,7 +4,7 @@ Low-effort self-documented components.
 
 This small package allow you to create documentation for your components on the fly. It's as simple as writing comments in your files. 
 It will create a `markdown` file for each of your components automatically! You can customize it however you want in `config.js`.
-For even better experience, we recommend using our [snippets](##Add-component-snippets-with-docs-indluded-in-VSCODE) for VSCode.
+For even better experience, we recommend using our [snippets](#Add-component-snippets-with-docs-indluded-in-VSCODE) for VSCode.
 
 ## Getting started
 
