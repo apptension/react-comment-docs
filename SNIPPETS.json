@@ -1,0 +1,40 @@
+"React Function Component Export Docs": {
+    "prefix": "rfced",
+    "body": [
+      "import React from 'react'",
+      "",
+      "function TestComponent() {",
+      "\treturn (",
+      "\t\t// @docs DOM",
+      "\t\t<div>",
+      "",
+      "\t\t</div>",
+      "\t\t// !docs DOM",
+      "\t)",
+      "}",
+      "",
+      "export default TestComponent",
+      ""
+    ],
+    "description": "React Function Component Export Default with Docs"
+  },
+	"React Class Component Docs": {
+    "prefix": "rccd",
+    "body": [
+      "import React, { Component } from 'react'",
+      "",
+      "export default class TestComponent extends Component {",
+      "\trender() {",
+      "\t\treturn (",
+      "\t\t\t// @docs DOM",
+      "\t\t\t<div>",
+      "\t\t\t\t",
+      "\t\t\t</div>",
+      "\t\t\t// !docs DOM",
+      "\t\t)",
+      "\t}",
+      "}",
+      ""
+    ],
+    "description": "React Class Component with Docs"
+  }
