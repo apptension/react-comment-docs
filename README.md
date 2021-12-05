@@ -10,7 +10,7 @@ For even better experience, we recommend using our [snippets](#Add-component-sni
 
 Install npm package ✨
 ```bash
-npm i @apptension/react-comment-docs
+npm i --save-dev @apptension/react-comment-docs
 ```
 
 Run watcher 👀
