@@ -17,7 +17,7 @@ export const getDataForMarkdown = (path, fields) => {
     });
     for (const tsType of tsTypes) {
       const [key, value] = tsType.split(":");
-      tsTypesObj[key.trim()] = value.trim();
+      tsTypesObj[key.trim().replace(/[^a-zA-Z ]/g, "")] = value.trim();
     }
     data.tsTypes = tsTypesObj;
   }
