@@ -70,6 +70,18 @@ ExampleComponent.propTypes = {
 // @
 ```
 
+#### Translations
+```javascript
+// @docs translations
+<CustomButton
+ label={intl.formatMessage({
+    description: 'A11Y: Navigation Button',
+    defaultMessage: 'Navigate',
+  })}
+ />
+// @
+```
+
 ### Config 
 You can specify the `fields` used in your docs, allowed component `extensions`, components and templates `directory`.
 ```javascript
