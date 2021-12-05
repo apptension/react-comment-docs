@@ -6,8 +6,10 @@ import { config } from "./config.js";
 import { createMarkdown } from "./functions/create-markdown.js";
 import { deleteMarkdown } from "./functions/delete-markdown.js";
 import { filterByExtensions } from "./functions/utils.js";
+import { validateConfig } from "./functions/validate-config.js";
 
 export const startReactCommentDocs = () => {
+  validateConfig(config);
   const [fileNames, templatePath, dynamicTemplatePath] = initialize(config);
   fileNames.forEach((fileName) => {
     const variables = getDataForMarkdown(fileName, config.fields);
