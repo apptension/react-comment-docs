@@ -1,20 +1,20 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
-function TestComponent() {
+const Testowy = props => {
   return (
     // @docs DOM
     <div>
-      <p>Test</p>
-      <div>
-        // @docs translation
-        <p>
-          {Intl.translation()}
-        </p>
-        // !docs translation
-      </div>
+
     </div>
     // !docs DOM
   )
 }
 
-export default TestComponent
+// @docs propTypes
+Testowy.propTypes = {
+
+}
+// @docs propTypes
+
+export default Testowy

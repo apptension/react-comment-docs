@@ -1,10 +1,10 @@
 {
-"React Function Component Export Docs": {
+  "React Function Component Export Docs": {
     "prefix": "rfced",
     "body": [
       "import React from 'react'",
       "",
-      "function TestComponent() {",
+      "function ${TM_FILENAME_BASE}() {",
       "\treturn (",
       "\t\t// @docs DOM",
       "\t\t<div>",
@@ -14,22 +14,95 @@
       "\t)",
       "}",
       "",
-      "export default TestComponent",
+      "export default ${TM_FILENAME_BASE}",
       ""
     ],
     "description": "React Function Component Export Default with Docs"
   },
-	"React Class Component Docs": {
-    "prefix": "rccd",
+  "React Class Component PropTypes with Docs": {
+    "prefix": "rccpd",
     "body": [
       "import React, { Component } from 'react'",
+      "import PropTypes from 'prop-types'",
       "",
-      "export default class TestComponent extends Component {",
+      "export default class ${TM_FILENAME_BASE} extends Component {",
+      "\t// @docs propTypes",
+      "\tstatic propTypes = {",
+      "\t\tprop: PropTypes",
+      "\t}",
+      "\t// !docs propTypes",
+      "",
       "\trender() {",
       "\t\treturn (",
       "\t\t\t// @docs DOM",
       "\t\t\t<div>",
-      "\t\t\t\t",
+      "",
+      "\t\t\t</div>",
+      "\t\t\t// !docs DOM",
+      "\t\t)",
+      "\t}",
+      "}",
+      ""
+    ],
+    "description": "React Class Component PropTypes Docs"
+  },
+  "React Function Component PropTypes with Docs": {
+    "prefix": "rfcpd",
+    "body": [
+      "import React from 'react'",
+      "import PropTypes from 'prop-types'",
+      "",
+      "function ${TM_FILENAME_BASE}(props) {",
+      "\treturn (",
+      "\t\t// @docs DOM",
+      "\t\t<div>",
+      "",
+      "\t\t</div>",
+      "\t\t// !docs DOM",
+      "\t)",
+      "}",
+      "",
+      "// @docs propTypes ",
+      "${TM_FILENAME_BASE}.propTypes = {",
+      "\t",
+      "}",
+      "// !docs propTypes",
+      "",
+      "export default ${TM_FILENAME_BASE}",
+      "",
+      ""
+    ],
+    "description": "React Function Component PropTypes with Docs"
+  },
+  "React Function Component with Docs": {
+    "prefix": "rfcd",
+    "body": [
+      "import React from 'react'",
+      "",
+      "export default function ${TM_FILENAME_BASE}() {",
+      "\treturn (",
+      "\t\t// @docs DOM",
+      "\t\t<div>",
+      "",
+      "\t\t</div>",
+      "\t\t// !docs DOM",
+      "\t)",
+      "}",
+      ""
+    ],
+    "description": "React Function Component with Docs"
+  },
+  "React Class Component with Docs": {
+    "prefix": "rccd",
+    "body": [
+      "import React, { Component } from 'react'",
+      "",
+      "export default class ${TM_FILENAME_BASE} extends Component {",
+      "\trender() {",
+      "\t\treturn (",
+      "\t\t\t// @docs DOM",
+      "\t\t\t<div>",
+      "",
       "\t\t\t</div>",
       "\t\t\t// !docs DOM",
       "\t\t)",
@@ -38,5 +111,70 @@
       ""
     ],
     "description": "React Class Component with Docs"
+  },
+  "React Arrow Function Component with Docs ": {
+    "prefix": "rafcd",
+    "body": [
+      "import React from 'react'",
+      "",
+      "export const ${TM_FILENAME_BASE} = () => {",
+      "\treturn (",
+      "\t\t// @docs DOM",
+      "\t\t<div>",
+      "",
+      "\t\t</div>",
+      "\t\t// @docs DOM",
+      "\t)",
+      "}",
+      ""
+    ],
+    "description": "React Arrow Function Component with Docs "
+  },
+  "React Arrow Component Export with Docs": {
+    "prefix": "rafced",
+    "body": [
+      "import React from 'react'",
+      "",
+      "const ${TM_FILENAME_BASE} = () => {",
+      "\treturn (",
+      "\t\t// @docs DOM",
+      "\t\t<div>",
+      "",
+      "\t\t</div>",
+      "\t\t// !docs DOM",
+      "\t)",
+      "}",
+      "",
+      "export default ${TM_FILENAME_BASE}",
+      ""
+    ],
+    "description": "React Arrow Component Export with Docs"
+  },
+  "React Arrow Function Component Export with Docs": {
+    "prefix": "rafced",
+    "body": [
+      "import React from 'react'",
+      "import PropTypes from 'prop-types'",
+      "",
+      "const ${TM_FILENAME_BASE} = props => {",
+      "\treturn (",
+      "\t\t// @docs DOM",
+      "\t\t<div>",
+      "",
+      "\t\t</div>",
+      "\t\t// !docs DOM",
+      "\t)",
+      "}",
+      "",
+      "// @docs propTypes",
+      "${TM_FILENAME_BASE}.propTypes = {",
+      "",
+      "}",
+      "// @docs propTypes",
+      "",
+      "export default ${TM_FILENAME_BASE}",
+      ""
+    ],
+    "description": "React Arrow Function Component Export with Docs"
   }
 }
