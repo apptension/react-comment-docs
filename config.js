@@ -5,6 +5,6 @@ export const config = {
   templatePath: `${path.resolve()}/template.md`,
   dynamicTemplatePath: `${path.resolve()}/dynamic-template-fragment.md`,
   extensions: [".js", ".jsx", ".ts", ".tsx"],
-  componentsDir: `${path.resolve()}/components`,
-  docsDir: `${path.resolve()}/docs`,
+  componentsDir: `${path.resolve()}/src/components`,
+  docsDir: `${path.resolve()}/src/docs`,
 };
